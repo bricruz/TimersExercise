@@ -1,0 +1,30 @@
+
+function countDown(time){
+    let timer = setInterval(function(){
+        time--;
+        if(time > 0)
+        {
+            console.log(time);
+        }
+        else{
+            clearInterval(timer);
+            console.log('DONE');
+        }
+    },1000)
+}
+
+function randomGame()
+{
+    let count = 0;
+    let rando = setInterval(function(){
+        let num = Math.random();
+        console.log(num);
+        count++;
+        if(num > 0.75)
+        {
+            clearInterval(rando);
+            console.log('It took ' + count + ' tries');
+        }
+        
+    }, 1000)
+}
